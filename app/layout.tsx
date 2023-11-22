@@ -9,11 +9,7 @@ export const metadata: Metadata = {
   description: '思ったことや読書の感想などの書き散らしブログ',
 }
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode
-}) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="ja">
       <body className={inter.className}>{children}</body>
