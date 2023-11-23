@@ -1,16 +1,26 @@
 import ArticleCard from './component/ArticleCard'
+import * as contentful from 'contentful'
+import { BlogEntrySkeleton } from './types/contentful'
+import { contentfulClient } from './client/contentful'
 
 type Article = {
-  id: number
+  id: string
   title: string
   date: string
-  body: string
 }
 
-export default function Home() {
-  const articles: Article[] = [
-    { id: 1, title: 'Article Title', date: Date(), body: 'This is the body of the article.' },
-  ]
+export default async function Home() {
+  function perseEntries(
+    entires: contentful.EntryCollection<BlogEntrySkeleton, undefined, string>,
+  ): Article[] {
+    return entires.items.map((entry) => ({
+      id: entry.sys.id,
+      title: entry.fields.title,
+      date: entry.sys.createdAt,
+    }))
+  }
+
+  const articles = perseEntries(await contentfulClient.getEntries<BlogEntrySkeleton>())
 
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">

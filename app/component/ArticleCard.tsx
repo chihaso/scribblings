@@ -1,15 +1,16 @@
+import Link from 'next/link'
+
 type Props = {
+  id: string
   title: string
   date: string
-  body: string
 }
 
-export default function ArticleCard({ title, date, body }: Props) {
+export default function ArticleCard({ id, title, date }: Props) {
   return (
-    <div className="article">
+    <Link className="article" href={`/articles/${id}`}>
       <h2>{title}</h2>
       <p className="date">{date}</p>
-      <p className="summary">{body}</p>
-    </div>
+    </Link>
   )
 }
