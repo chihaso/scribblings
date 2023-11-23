@@ -5,25 +5,25 @@
 .article h3 {
   font-size: xx-large;
   font-weight: bold;
-  margin-top: 12px;
+  margin: 36px 0 24px;
 }
 
 .article h4 {
   font-size: x-large;
   font-weight: bold;
-  margin-top: 12px;
+  margin: 36px 0 24px;
 }
 
 .article h5 {
   font-size: 1.3rem;
   font-weight: bold;
-  margin-top: 6px;
+  margin: 36px 0 24px;
 }
 
 .article h6 {
   font-size: large;
   font-weight: bold;
-  margin-top: 6px;
+  margin: 36px 0 24px;
 }
 
 .article p {
@@ -51,6 +51,10 @@
   border-left: 6px solid rgb(231, 235, 238);
   padding-left: 0.875rem;
   font-style: normal;
+  margin: 24px 0;
+}
+
+.article hr {
   margin: 24px 0;
 }
 
