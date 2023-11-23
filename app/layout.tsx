@@ -15,11 +15,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="ja">
       <body className={inter.className}>
         <header className="fixed top-0 left-0 right-0 text-center py-3">
-          <h1 className="text-xl font-bold tracking-wide">
+          <h1 className="text-3xl font-bold tracking-wide">
             <Link href="/">書き散らし</Link>
           </h1>
         </header>
-        {children}
+        <main className="mt-12">{children}</main>
       </body>
     </html>
   )

@@ -1,4 +1,4 @@
-import ArticleCard from './component/ArticleCard'
+import ArticleCard from './component/ArticleCard/ArticleCard'
 import * as contentful from 'contentful'
 import { BlogEntrySkeleton } from './types/contentful'
 import { contentfulClient } from './client/contentful'
@@ -23,12 +23,12 @@ export default async function Home() {
   const articles = perseEntries(await contentfulClient.getEntries<BlogEntrySkeleton>())
 
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="article-list">
+    <div className="flex min-h-screen flex-col items-center justify-between">
+      <ul className="article-list w-4/5 max-w-3xl">
         {articles.map((article) => (
           <ArticleCard key={article.id} {...article} />
         ))}
-      </div>
-    </main>
+      </ul>
+    </div>
   )
 }
