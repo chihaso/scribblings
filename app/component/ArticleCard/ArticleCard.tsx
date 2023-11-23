@@ -13,7 +13,7 @@ export default function ArticleCard({ id, title, date }: Props) {
       <Link href={`/articles/${id}`}>
         <div className="p-3">
           <h2 className="text-2xl">{title}</h2>
-          <p className="date">{date}</p>
+          <p className="date mt-3">{date}</p>
         </div>
       </Link>
     </li>

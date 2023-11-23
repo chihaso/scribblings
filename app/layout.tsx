@@ -19,7 +19,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             <Link href="/">書き散らし</Link>
           </h1>
         </header>
-        <main className="mt-12">{children}</main>
+        <main className="mt-24">{children}</main>
       </body>
     </html>
   )

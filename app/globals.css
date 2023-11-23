@@ -23,3 +23,7 @@ header {
   color: rgb(255, 255, 255);
   background: rgb(90, 90, 90);
 }
+
+.data {
+  font-size: small;
+}

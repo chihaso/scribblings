@@ -18,12 +18,12 @@ export default async function Article({ params }: Props) {
   const entry = await contentfulClient.getEntry<BlogEntrySkeleton>(params.id)
 
   return (
-    <main className="min-h-screen p-24">
+    <div className="article mx-auto border rounded w-4/5 max-w-3xl p-5">
       <article>
-        <h2>{entry.fields.title}</h2>
-        <p className="date">{entry.sys.createdAt}</p>
-        <section>{documentToReactComponents(entry.fields.body)}</section>
+        <h2 className="text-2xl">{entry.fields.title}</h2>
+        <p className="date mt-3">{entry.sys.createdAt}</p>
+        <section className="mt-5 text-lg">{documentToReactComponents(entry.fields.body)}</section>
       </article>
-    </main>
+    </div>
   )
 }
