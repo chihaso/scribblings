@@ -14,12 +14,12 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="ja">
       <body className={inter.className}>
-        <header className="fixed top-0 left-0 right-0 text-center py-3">
+        <header className="fixed top-0 left-0 right-0 text-center py-3 z-50">
           <h1 className="text-3xl font-bold tracking-wide">
             <Link href="/">書き散らし</Link>
           </h1>
         </header>
-        <main className="mt-24">{children}</main>
+        <main className="my-24">{children}</main>
       </body>
     </html>
   )

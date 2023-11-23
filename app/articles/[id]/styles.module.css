@@ -1,3 +1,75 @@
 .article {
   border-color: var(--foreground-rgb);
 }
+
+.article h3 {
+  font-size: xx-large;
+  font-weight: bold;
+  margin-top: 12px;
+}
+
+.article h4 {
+  font-size: x-large;
+  font-weight: bold;
+  margin-top: 12px;
+}
+
+.article h5 {
+  font-size: 1.3rem;
+  font-weight: bold;
+  margin-top: 6px;
+}
+
+.article h6 {
+  font-size: large;
+  font-weight: bold;
+  margin-top: 6px;
+}
+
+.article p {
+  margin-top: 6px;
+}
+
+.article code {
+  padding: 3px 12px;
+  background-color: rgb(187, 187, 187);
+  color: rgb(0, 0, 0);
+  border-radius: 5px;
+}
+
+.article ul {
+  list-style-type: disc;
+  margin-left: 24px;
+}
+
+.article ol {
+  list-style-type: decimal;
+  margin-left: 24px;
+}
+
+.article blockquote {
+  border-left: 6px solid rgb(231, 235, 238);
+  padding-left: 0.875rem;
+  font-style: normal;
+  margin: 24px 0;
+}
+
+.article table {
+  margin: 24px 0;
+}
+
+.article th,
+.article td {
+  background-clip: padding-box;
+  border: 1px solid rgb(174, 193, 204);
+  border-collapse: collapse;
+  padding: 10px 12px;
+  text-align: left;
+  min-width: 48px;
+  position: relative;
+}
+
+.article th {
+  background-color: rgb(162, 162, 162);
+  font-weight: 400;
+}
