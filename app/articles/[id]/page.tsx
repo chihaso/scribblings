@@ -1,4 +1,4 @@
-import { contentfulClient } from '@/app/client/contentful'
+import { contentfulClient } from '@/app/lib/contentfulClient'
 import { BlogEntrySkeleton } from '@/app/types/contentful'
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
 import style from './styles.module.css'

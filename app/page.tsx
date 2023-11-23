@@ -1,7 +1,7 @@
 import ArticleCard from './component/ArticleCard/ArticleCard'
 import * as contentful from 'contentful'
 import { BlogEntrySkeleton } from './types/contentful'
-import { contentfulClient } from './client/contentful'
+import { contentfulClient } from './lib/contentfulClient'
 
 type Article = {
   id: string
