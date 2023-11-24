@@ -2,6 +2,7 @@ import ArticleCard from './component/ArticleCard/ArticleCard'
 import * as contentful from 'contentful'
 import { BlogEntrySkeleton } from './types/contentful'
 import { contentfulClient } from './lib/contentfulClient'
+import { localizedDate } from './lib/date'
 
 type Article = {
   id: string
@@ -16,7 +17,7 @@ export default async function Home() {
     return entires.items.map((entry) => ({
       id: entry.sys.id,
       title: entry.fields.title,
-      date: entry.sys.createdAt,
+      date: localizedDate(entry.sys.createdAt),
     }))
   }
 
